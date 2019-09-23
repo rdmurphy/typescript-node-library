@@ -1,0 +1,43 @@
+{
+  "name": "tktk",
+  "version": "0.0.0",
+  "description": "tktk",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "typebundle src/index.ts --output dist --target 8 --compress",
+    "build-docs": "doctoc README.md --github",
+    "git-pre-commit": "lint-staged",
+    "prerelease": "npm run build",
+    "release": "np --no-yarn",
+    "start": "typebundle src/index.ts --output dist --target 8 --watch",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "rdmurphy/tktk"
+  },
+  "author": "Ryan Murphy",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@newswire/prettier-config": "^2.0.0",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.5",
+    "@zeit/git-hooks": "^0.1.4",
+    "doctoc": "^1.4.0",
+    "lint-staged": "^9.3.0",
+    "mocha": "^6.2.0",
+    "np": "^5.1.0",
+    "prettier": "^1.18.2",
+    "typebundle": "^0.5.1"
+  },
+  "lint-staged": {
+    "*.{html,js,jsx,md,mjs}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": "@newswire/prettier-config"
+}
