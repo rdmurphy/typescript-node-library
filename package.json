@@ -34,7 +34,7 @@
     "typebundle": "^0.7.0"
   },
   "lint-staged": {
-    "*.{html,js,jsx,md,mjs}": [
+    "*.{js,md,mjs,ts}": [
       "prettier --write",
       "git add"
     ]
