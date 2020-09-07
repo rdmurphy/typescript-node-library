@@ -1,15 +1,16 @@
-// native
-const assert = require('assert').strict;
+// packages
+const { test } = require('uvu');
+const assert = require('uvu/assert');
 
 // local
 const lib = require('../');
 
-describe('project', () => {
-  it('can import the library', () => {
-    assert.ok(lib);
-  });
-
-  it('dummy function works', () => {
-    assert.strictEqual(lib.square(4), 16);
-  });
+test('can import the library', () => {
+	assert.ok(lib);
 });
+
+test('dummy function works', () => {
+	assert.equal(lib.square(4), 16);
+});
+
+test.run();

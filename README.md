@@ -5,8 +5,8 @@ A template for quickly spinning up a new Node.js library written in TypeScript. 
 ## Setup
 
 ```sh
-npm init clone rdmurphy/typescript-node-library new-library
-cd new-library
+npm init clone rdmurphy/typescript-node-library <new-library>
+cd <new-library>
 npm install
 ```
 
